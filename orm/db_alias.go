@@ -37,12 +37,13 @@ var (
 	drivers       = map[string]DriverType{
 		"mysql":    DR_MySQL,
 		"postgres": DR_Postgres,
+		"oracle":   DR_Oracle,
 		"sqlite3":  DR_Sqlite,
 	}
 	dbBasers = map[DriverType]dbBaser{
 		DR_MySQL:    newdbBaseMysql(),
 		DR_Sqlite:   newdbBaseSqlite(),
-		DR_Oracle:   newdbBaseMysql(),
+		DR_Oracle:   newdbBaseOracle(),
 		DR_Postgres: newdbBasePostgres(),
 	}
 )
@@ -156,6 +157,9 @@ func RegisterDataBase(aliasName, driverName, dataSource string, params ...int) {
 		if err == nil {
 			al.TZ = loc
 		}
+
+	case DR_Oracle:
+		al.TZ = time.UTC
 	}
 
 	for i, v := range params {

@@ -2,7 +2,7 @@ package beego
 
 import (
 	"fmt"
-	"github.com/astaxie/beego/admin"
+	"github.com/linphy/beego/admin"
 	"net/http"
 	"time"
 )

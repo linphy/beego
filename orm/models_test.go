@@ -7,6 +7,7 @@ import (
 
 	_ "github.com/go-sql-driver/mysql"
 	_ "github.com/lib/pq"
+	_ "github.com/linphy/go-oci8"
 	_ "github.com/mattn/go-sqlite3"
 )
 
@@ -175,6 +176,7 @@ var (
 	IsMysql    = DBARGS.Driver == "mysql"
 	IsSqlite   = DBARGS.Driver == "sqlite3"
 	IsPostgres = DBARGS.Driver == "postgres"
+	IsOracle   = DBARGS.Driver == "oracle"
 )
 
 var (
@@ -194,13 +196,15 @@ Default DB Drivers.
    mysql: https://github.com/go-sql-driver/mysql
  sqlite3: https://github.com/mattn/go-sqlite3
 postgres: https://github.com/lib/pq
+oracle  : https://github.com/linphy/go-oci8
 
 usage:
 
-go get -u github.com/astaxie/beego/orm
+go get -u github.com/linphy/beego/orm
 go get -u github.com/go-sql-driver/mysql
 go get -u github.com/mattn/go-sqlite3
 go get -u github.com/lib/pq
+go get -u github.com/linphy/go-oci8
 
 #### MySQL
 mysql -u root -e 'create database orm_test;'

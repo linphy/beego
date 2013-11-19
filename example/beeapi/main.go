@@ -1,8 +1,8 @@
 package main
 
 import (
-	"github.com/astaxie/beego"
-	"github.com/astaxie/beego/example/beeapi/controllers"
+	"github.com/linphy/beego"
+	"github.com/linphy/beego/example/beeapi/controllers"
 )
 
 //		Objects

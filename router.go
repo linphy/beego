@@ -2,9 +2,9 @@ package beego
 
 import (
 	"fmt"
-	"github.com/astaxie/beego/admin"
-	beecontext "github.com/astaxie/beego/context"
-	"github.com/astaxie/beego/middleware"
+	"github.com/linphy/beego/admin"
+	beecontext "github.com/linphy/beego/context"
+	"github.com/linphy/beego/middleware"
 	"net/http"
 	"net/url"
 	"os"

@@ -1,8 +1,8 @@
 package controllers
 
 import (
-	"github.com/astaxie/beego"
 	"github.com/garyburd/go-websocket/websocket"
+	"github.com/linphy/beego"
 	"io/ioutil"
 	"math/rand"
 	"net/http"

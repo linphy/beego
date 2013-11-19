@@ -18,10 +18,10 @@ func getDbDropSql(al *alias) (sqls []string) {
 		os.Exit(2)
 	}
 
-	Q := al.DbBaser.TableQuote()
+	//Q := al.DbBaser.TableQuote()
 
 	for _, mi := range modelCache.allOrdered() {
-		sqls = append(sqls, fmt.Sprintf(`DROP TABLE IF EXISTS %s%s%s`, Q, mi.table, Q))
+		sqls = append(sqls, fmt.Sprintf(`DROP TABLE  %s`, mi.table))
 	}
 	return sqls
 }
